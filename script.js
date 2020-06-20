@@ -45,9 +45,7 @@ function turn(squareId, player){
      detectValue[squareId] = player;
      document.getElementById(squareId).innerText = player;
      let gameWon = checkWin(detectValue, player);  // A variable letting know who wins the round
-      if(gameWon){ 
-         gameOver(gameWon);                         
-       }
+      if(gameWon) gameOver(gameWon)
 }
 
 // SET THE CHECK WIN FUNCTION TO CHECK WHO ACTUALLY WON
