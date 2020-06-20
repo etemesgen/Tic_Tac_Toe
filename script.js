@@ -51,5 +51,5 @@ function turn(squareId, player){
 // SET THE CHECK WIN FUNCTION TO CHECK WHO ACTUALLY WON
 
 function checkWin(detect, player){
-     
+     let winner
 }
