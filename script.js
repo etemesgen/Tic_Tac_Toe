@@ -51,5 +51,21 @@ function turn(squareId, player){
 // SET THE CHECK WIN FUNCTION TO CHECK WHO ACTUALLY WON
 
 function checkWin(detect, player){
-     let winner
+     let plays = detect.reduce((a, e, i) => 
+      (e === player) ? a.concat(i) : a, []);
+      let gameWon = null;
+      for(let [index, win] of winningPossibilities.entries()){
+          if(win.every(elem => plays.indexOf(elem > -1))){
+            gameWon = {index: index, player: player};
+            break;
+          }
+        }
+          return gameWon;
+    }
+
+// SET THE GAME OVER FUNCTION TO END THE GAME
+
+function gameOver(gameWon){
+  for(let index of winningPossibilities[gameWon.index]){}
 }
+
